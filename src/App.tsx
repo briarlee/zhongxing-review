@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Header } from './components/Header';
 import { BasicInfo } from './components/BasicInfo';
 import { ValueScorePanel } from './components/ValueScorePanel';

@@ -1,4 +1,4 @@
-import { ValueDefinition, GradeConfig } from '../types';
+import { ValueDefinition, GradeConfig, ValueScores } from '../types';
 
 export const VALUES: ValueDefinition[] = [
   {
@@ -129,7 +129,7 @@ export function calculateGrade(score: number): GradeConfig {
   return GRADE_CONFIG[3];
 }
 
-export function calculateTotalScore(valueScores: Record<string, boolean[]>): number {
+export function calculateTotalScore(valueScores: ValueScores): number {
   return Object.values(valueScores).reduce((total, scores) => {
     return total + scores.filter(Boolean).length;
   }, 0);
